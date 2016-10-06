@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>demo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script >
+		angular.module('app',[]).controller("testCtrl",["$scope",function($scope){
+			console.log($scope.hh=123)
+			$scope.image_arr=[
+				"http://z9x9.com/wp-content/uploads/2016/04/6488897.jpg",
+				"http://ipetair.com/wp-content/uploads/2014/09/479_%E7%8B%97%E7%8B%97%E7%9A%84%E8%BA%AB%E9%AB%94%E8%AA%9E%E8%A8%80%E4%BD%A0%E7%9F%A5%E5%A4%9A%E5%B0%91_1.jpg",
+				"http://z9x9.com/wp-content/uploads/2016/04/6488895.jpg",
+			];
+		}]);
+		</script>
+		<script src="imageAutoWH.js"></script>
+	</head>
+	<body ng-app="app">
+	<div ng-controller="testCtrl" >
+		<div style="display:inline-block;width:100px;height:100px;" ng-repeat="item in image_arr">
+		<image-load 
+		src="item"
+		></image-load>
+		</div>
+	</div>
+	</body>
+</html>
