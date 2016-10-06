@@ -16,6 +16,7 @@ angular.module("app").directive("imageLoad",['$parse','$timeout',function($parse
 				$scope.$apply();
 			}
 			img.src=$scope.src;
+			console.log("test")
         },
     }
 }]);
